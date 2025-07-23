@@ -1,9 +1,11 @@
-# DrissionPage自动截图爬虫项目
+# Drission Auto Capture
 
+> 🤖 **智能网页自动截图爬虫** | 基于DrissionPage的自动化截图工具
+> 
 > 📚 **快速上手**: [点击查看快速启动指南 →](QUICKSTART.md)
 
 ## 项目描述
-本项目使用DrissionPage框架自动化访问腾讯内部考勤系统，对页面进行截图保存，并支持翻页功能。
+**Drission Auto Capture** 是一个基于DrissionPage框架的智能网页自动截图工具。支持自动登录检测、智能翻页、批量截图等功能。特别适用于需要定期截图保存网页内容的场景，如考勤系统、报表系统等。
 
 ## 功能特性
 - 🌐 自动打开指定网页

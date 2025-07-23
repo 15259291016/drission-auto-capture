@@ -1,4 +1,4 @@
-# 🚀 快速启动指南
+# 🚀 Drission Auto Capture - 快速启动指南
 
 ## 1️⃣ 环境准备
 ```bash
