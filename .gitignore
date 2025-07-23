@@ -61,9 +61,10 @@ screenshots/*
 temp/
 tmp/
 
-# 配置文件（可能包含敏感信息）
-# config_local.py
-# .env.local
+# 配置文件（包含敏感信息）
+config.py
+.env
+.env.local
 
 # 测试相关
 .coverage

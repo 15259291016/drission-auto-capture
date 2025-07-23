@@ -23,7 +23,7 @@ crawler = ScreenshotCrawler()
 
 # 开始截图任务
 success_count, screenshot_files = crawler.start_screenshot_task(
-    url="https://om.tencent.com/attendances/check_out/24651855?from=TAPD",
+    url="https://example.com/your-target-page",
     max_pages=5
 )
 
@@ -122,7 +122,7 @@ NEXT_PAGE_SELECTOR = "cal"  # 元素的ID
 
 3. **自动登录流程**（仅在需要时执行）:
    - **精确定位用户名框**: 优先使用 `id="username"` 定位输入框
-   - **自动输入用户名**: 会自动填入 `v_zhicniu`
+   - **自动输入用户名**: 会自动填入配置的用户名
    - **等待手动输入密码**: 暂停20秒让您在浏览器中输入密码
    - **自动点击登录按钮**: 智能查找并点击登录按钮
    - **等待页面跳转**: 监控登录状态，检测到成功后立即继续
@@ -149,7 +149,7 @@ NEXT_PAGE_SELECTOR = "cal"  # 元素的ID
 ```
 🔍 检查是否需要登录...
 🔍 检测到登录相关内容，检查是否需要登录...
-✅ 已自动输入用户名: v_zhicniu
+✅ 已自动输入用户名: your_username
 🔐 请在浏览器中手动输入密码
 ⏰ 程序将等待 20 秒...
 💡 输入密码后，程序将自动点击登录按钮
@@ -216,7 +216,7 @@ python demo_click_a_tag.py
 
 ## 🛡️ 注意事项
 
-1. **自动登录**：程序会自动输入用户名 `v_zhicniu`，您只需手动输入密码
+1. **自动登录**：程序会自动输入配置的用户名，您只需手动输入密码
 2. **等待时间**：登录等待时间为20秒，可在 `config.py` 中修改 `LOGIN_WAIT_TIME`
 3. **网络稳定**：确保网络连接稳定
 4. **磁盘空间**：确保有足够的磁盘空间保存截图

@@ -6,6 +6,10 @@
 pip install -r requirements.txt
 
 # 确保Chrome浏览器已安装
+
+# ⚠️ 配置敏感信息（必需）
+cp config.example.py config.py
+# 然后编辑 config.py，修改 TARGET_URL 和 LOGIN_USERNAME
 ```
 
 ## 2️⃣ 立即启动

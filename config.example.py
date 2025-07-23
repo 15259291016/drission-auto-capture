@@ -1,6 +1,11 @@
 """
-项目配置文件
-包含所有可配置的参数和设置
+配置文件模板
+请复制此文件为 config.py 并修改相应配置
+
+使用方法：
+1. 复制此文件：cp config.example.py config.py
+2. 修改 config.py 中的配置参数
+3. 运行程序：python run_crawler.py
 """
 
 import os
@@ -24,15 +29,16 @@ MAX_RETRY_TIMES = 3        # 最大重试次数
 RETRY_DELAY = 2           # 重试延迟（秒）
 MAX_PAGES = 50            # 最大翻页数量
 
+# ⚠️ 请修改以下配置为您的实际信息
 # 目标网页配置
-TARGET_URL = "https://om.tencent.com/attendances/check_out/24651855?from=TAPD"
+TARGET_URL = "https://example.com/your-target-page"  # ⚠️ 请修改为您的目标网页URL
 NEXT_PAGE_SELECTOR = "cal"  # 下一页元素的ID，程序会点击该元素下的第一个A标签
 
 # A标签点击配置
 CLICK_FIRST_A_AFTER_LOGIN = False  # 是否在登录后自动点击第一个A标签
 
 # 登录配置
-LOGIN_USERNAME = "v_zhicniu"      # 登录用户名
+LOGIN_USERNAME = "your_username"  # ⚠️ 请修改为您的登录用户名
 LOGIN_WAIT_TIME = 20              # 等待用户输入密码的时间（秒）
 USERNAME_INPUT_ID = "username"    # 用户名输入框的ID
 LOGIN_BUTTON_WAIT = 10            # 等待登录处理的最大时间（秒）

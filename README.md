@@ -5,7 +5,7 @@
 > 📚 **快速上手**: [点击查看快速启动指南 →](QUICKSTART.md)
 
 ## 项目描述
-**Drission Auto Capture** 是一个基于DrissionPage框架的智能网页自动截图工具。支持自动登录检测、智能翻页、批量截图等功能。特别适用于需要定期截图保存网页内容的场景，如考勤系统、报表系统等。
+**Drission Auto Capture** 是一个基于DrissionPage框架的智能网页自动截图工具。支持自动登录检测、智能翻页、批量截图等功能。特别适用于需要定期截图保存网页内容的场景，如管理系统、报表系统、监控面板等。
 
 ## 功能特性
 - 🌐 自动打开指定网页
@@ -32,22 +32,32 @@ pip install -r requirements.txt
 ### 2. 确保Chrome浏览器已安装
 程序需要Chrome浏览器支持，请确保系统中已安装Chrome。
 
-### 3. 配置参数（可选）
+### 3. 配置参数（必需）
+⚠️ **首次使用前必须配置**：
+```bash
+# 复制配置模板
+cp config.example.py config.py
+
+# 编辑配置文件，修改以下关键参数：
+# - TARGET_URL: 您的目标网页地址  
+# - LOGIN_USERNAME: 您的登录用户名
+```
+
 在 `config.py` 中可以修改以下设置：
 ```python
 # 目标网页
-TARGET_URL = "https://om.tencent.com/attendances/check_out/24651855?from=TAPD"
+TARGET_URL = "https://example.com/your-target-page"  # 修改为您的目标网页
 
 # 登录信息  
-LOGIN_USERNAME = "v_zhicniu"     # 自动输入的用户名
-LOGIN_WAIT_TIME = 20             # 等待输入密码的时间
+LOGIN_USERNAME = "your_username"  # 修改为您的用户名
+LOGIN_WAIT_TIME = 20              # 等待输入密码的时间
 
 # 截图设置
-SCREENSHOT_DIR = "screenshots"   # 截图保存目录
-MAX_PAGES = 50                   # 最大翻页数量
+SCREENSHOT_DIR = "screenshots"    # 截图保存目录
+MAX_PAGES = 50                    # 最大翻页数量
 
 # 翻页设置
-NEXT_PAGE_SELECTOR = "cal"       # 翻页元素ID
+NEXT_PAGE_SELECTOR = "cal"        # 翻页元素ID
 ```
 
 ## 🚀 快速启动
@@ -87,7 +97,7 @@ crawler = ScreenshotCrawler()
 
 # 开始截图任务
 crawler.start_screenshot_task(
-    url="https://om.tencent.com/attendances/check_out/24651855?from=TAPD",
+    url="https://example.com/your-target-page",
     max_pages=10  # 最大截图页数
 )
 ```
@@ -119,7 +129,7 @@ with ScreenshotCrawler() as crawler:
 
 ### 2. 登录处理（如需要）
 ```
-🔐 自动输入用户名: v_zhicniu
+🔐 自动输入用户名: your_username
 ⏰ 等待您手动输入密码（20秒）
 🔘 自动点击登录按钮
 🔄 等待页面跳转
